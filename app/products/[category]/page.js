@@ -17,7 +17,7 @@ export function generateStaticParams () {
 }
 
 const getProducts = async(category) => {
-    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/productos/${category}`, {cache: 'no-cache'})
+    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/productos/${category}`, {cache: 'no-cache'}).then(res => res.json())
     const productos = await data.json()
     return productos
 }
