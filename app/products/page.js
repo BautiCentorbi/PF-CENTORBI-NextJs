@@ -2,7 +2,7 @@ import React from 'react'
 import ItemList from '../components/ui/ItemList/ItemList'
 
 const getProducts = async() => {
-    const data = await fetch(`http://localhost:3000/api/productos`, {cache: 'no-cache'})
+    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/productos`, {cache: 'no-cache'})
     const productos = await data.json()
     return productos
 }
