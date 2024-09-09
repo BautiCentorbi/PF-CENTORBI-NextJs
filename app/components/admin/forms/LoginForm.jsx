@@ -4,7 +4,7 @@ import { FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { useAuthContext } from "@/app/Context/AuthContext";
 
 const LoginForm = () => {
-    const { registerUser, loginUser } = useAuthContext()
+    const { registerUser, loginUser, googleLogin } = useAuthContext()
     
     const [user, setUser] = useState({
         email: '',
@@ -101,13 +101,14 @@ const LoginForm = () => {
             >
                 Iniciar sesión
             </button>
-            {/* <button
-                className="flex items-center bg-white py-3 px-6 text-blue-900 rounded-full"
+            <button
+                type="button"
+                className="flex items-center justify-center gap-4 bg-white py-3 px-6 text-ourpink-light rounded-lg"
                 onClick={() => googleLogin()}
                 >
-                    <FaGoogle size={'3xl'} />
+                    <FaGoogle  size={24}/>
                 Login with Google
-            </button> */}
+            </button>
             <h4 className="text-center text-slate-200">¿No tienes una cuenta?</h4>
             <button
                 type="button"
