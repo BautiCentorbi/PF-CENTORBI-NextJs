@@ -17,7 +17,7 @@ export function generateStaticParams () {
 }
 
 const getProducts = async(category) => {
-    const data = await fetch(`${process.env.VERCEL_URL}/api/productos/${category}`)
+    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/productos/${category}`)
     const productos = await data.json()
     return productos
 }

@@ -1,8 +1,9 @@
 import React from 'react'
 import ItemList from '@/app/components/ui/ItemList/ItemList'
 
+
 const getProducts = async() => {
-    const data = await fetch(`${process.env.VERCEL_URL}/api/productos`, {cache: 'no-cache'})
+    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/productos`, {cache: 'no-cache'})
     if (!data.ok) {
         throw new Error('Error fetching data')
     }
