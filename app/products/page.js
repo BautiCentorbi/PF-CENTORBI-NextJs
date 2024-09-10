@@ -6,7 +6,7 @@ const getProducts = async() => {
     if (!data.ok) {
         throw new Error('Error fetching data')
     }
-    const productos = await data.json()
+    const productos = await data?.json()
     return productos
 }
 const Productos = async() => {
