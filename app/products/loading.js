@@ -2,7 +2,15 @@ import React from 'react'
 import ItemCardSkeleton from '@/app/components/ui/Skeleton/ItemCardSkeleton'
 
 const getProducts = async() => {
-    const data = await fetch(`${process.env.API_BASE_URL}/api/productos`, {cache: 'no-cache'})
+    try {
+        const data = await fetch(`${process.env.VERCEL_URL}/api/productos`, {cache: 'no-cache'}).then(res => res.json())
+        if (!response.ok) {
+            throw new Error (`HTTP error Status : ${response.status}`)
+        }
+    } catch (error) {
+        console.log('Error while trying to get the data' + error)
+    }
+    
     const productos = await data.json()
     return productos
 }
