@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import LoginPage from './login/LoginPage'
-import { useAuthContext } from '../Context/AuthContext'
+import { useAuthContext } from '@/app/Context/AuthContext'
 
 const AdminLayout = ({children}) => {
     const { user } = useAuthContext()

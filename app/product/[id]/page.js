@@ -10,12 +10,11 @@ const ProductDetail = () => {
   const { id } = useParams()
   const [ loading,setLoading ] = useState(false)
   const [ singleProduct, setSingleProduct ] = useState(null)
-  // const { addToCart } = useCartContext()
   
   const getProductById = async (id) => {
     try {
       const productRef = collection(db, 'productos')
-      const q = query(productRef, where('id', '==', parseInt(id)))
+      const q = query(productRef, where('id', '==', id))
       const querySnapshot = await getDocs(q)
       if(!querySnapshot.empty){ 
         return querySnapshot.docs[0].data()

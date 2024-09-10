@@ -5,6 +5,8 @@ import { doc, setDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
 import { useRouter } from "next/navigation";
+import { Toaster, toast } from 'sonner'
+
 
 const createProduct = async(values) => {
     const id = uuidv4()
@@ -54,9 +56,6 @@ const CreateForm = () => {
   }
 
   const [error, setError] = useState({});
-//   const [loading, setLoading] = useState(false);
-//   const { cart, setCart, totalPrice, clearCart } = useCartContext;
-
 
   const validateForm = () => {
     // name Validation
@@ -109,11 +108,19 @@ const CreateForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await createProduct(values, file);
+    if (setError.length === 0) {
+      toast.success('Has añadido correctamente el producto')
+      await createProduct(values, file);
+    } else {
+      toast.warning('Revisa y/o completa todos los campos para continuar')
+      return
+    }
+    setError('')
   };
 
   return (
     <div>
+      <Toaster richColors expand={false} />
       <form onSubmit={handleSubmit} className="max-w-sm mx-auto">
         <div className="mb-5">
           <label
@@ -142,6 +149,7 @@ const CreateForm = () => {
             type="file"
             name="image"
             onChange={handeImageChange}
+            alt={values.name}
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Este es un curso de MongoDB donde aprenderás..."
           />

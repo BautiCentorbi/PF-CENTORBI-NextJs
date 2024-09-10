@@ -1,8 +1,8 @@
 import React from 'react'
-import ItemCardSkeleton from '../components/ui/Skeleton/ItemCardSkeleton'
+import ItemCardSkeleton from '@/app/components/ui/Skeleton/ItemCardSkeleton'
 
 const getProducts = async() => {
-    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/productos`, {cache: 'no-cache'}).then(res => res.json())
+    const data = await fetch(`${process.env.API_BASE_URL}/api/productos`, {cache: 'no-cache'})
     const productos = await data.json()
     return productos
 }

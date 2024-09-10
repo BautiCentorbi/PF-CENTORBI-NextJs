@@ -1,5 +1,5 @@
 import React from 'react'
-import NavigationMenu from '../components/NavigationMenu/NavigationMenu'
+import NavigationMenu from '@/app/components/NavigationMenu/NavigationMenu'
 
 export async function generateMetadata({params, searchParams}, parent) {
   return {

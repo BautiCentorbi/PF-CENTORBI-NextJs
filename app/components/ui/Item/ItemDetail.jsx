@@ -6,7 +6,6 @@ import StockCounter from '../../Counter/StockCounter'
 import useCostTransform from '@/app/hooks/useCostTransform'
 import { useCartContext } from '@/app/Context/CartContext'
 import { useRouter } from 'next/navigation'
-import { redirect } from 'next/navigation'
 
 const ItemDetail = ({name, img, price,lgDescription, id, stock }) => {
     const [ cantidad, setCantidad ] = useState(0)

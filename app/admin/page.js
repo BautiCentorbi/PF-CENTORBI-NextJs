@@ -1,7 +1,6 @@
 import React from 'react'
-import ProductsTable from '../components/admin/ProductsTable'
-import LogoutButton from './login/LogoutButton'
-
+import ProductsTable from '@/app/components/admin/ProductsTable'
+import LogoutButton from '@/app/components/ui/Buttons/LogoutButton'
 const AdminPage = () => {
   return (
     <div className='flex flex-col flex-grow h-[80vh] w-full items-center justify-start my-24 gap-8'>
