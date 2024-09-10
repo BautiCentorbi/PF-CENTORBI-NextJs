@@ -16,8 +16,10 @@ export function generateStaticParams () {
     ]
 }
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api'
+
 const getProducts = async(category) => {
-    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/productos/${category}`)
+    const data = await fetch(`${apiUrl}/productos/${category}`)
     const productos = await data.json()
     return productos
 }
