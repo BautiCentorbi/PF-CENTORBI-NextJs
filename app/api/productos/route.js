@@ -6,7 +6,9 @@ export async function GET(request) {
     const productsRef = collection(db, 'productos')
     
     try {
+        console.log('Fetching Products from Firebase')
         const querySnapshot = await getDocs(productsRef)
+        console.log('Products Fetched Succesfully')
         
         const products = querySnapshot.docs.map(doc => ({
             id: doc.id,
