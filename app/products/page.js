@@ -2,6 +2,7 @@ import React from 'react'
 import ItemList from '@/app/components/ui/ItemList/ItemList'
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL
+export const dynamic = 'force-dynamic';
 
 const getProducts = async() => {
     const data = await fetch(`${apiUrl}/api/productos`, {cache: 'no-cache'})

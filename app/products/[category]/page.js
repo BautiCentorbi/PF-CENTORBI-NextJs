@@ -17,6 +17,7 @@ export function generateStaticParams () {
 }
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL
+export const dynamic = 'force-dynamic';
 
 const getProducts = async(category) => {
     const data = await fetch(`${apiUrl}/api/productos/${category}`, {cache: 'no-cache'})
