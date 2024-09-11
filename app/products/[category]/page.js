@@ -22,7 +22,7 @@ const getProducts = async(category) => {
     const data = await fetch(`${apiUrl}/productos/${category}`, {cache: 'no-cache'})
     if (!data.ok) {
         const errorText = await data.text()
-        console.log('Error response form api', errorText)
+        console.log('Error response from api', errorText)
         throw new Error('Error fetching data')
     }
     const productos = await data.json()
