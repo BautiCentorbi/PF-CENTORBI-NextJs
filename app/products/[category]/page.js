@@ -19,7 +19,7 @@ export function generateStaticParams () {
 const apiUrl = process.env.NEXT_PUBLIC_API_URL
 
 const getProducts = async(category) => {
-    const data = await fetch(`${apiUrl}/productos/${category}`, {cache: 'no-cache'})
+    const data = await fetch(`${apiUrl}/api/productos/${category}`, {cache: 'no-cache'})
     if (!data.ok) {
         const errorText = await data.text()
         console.log('Error response from api', errorText)

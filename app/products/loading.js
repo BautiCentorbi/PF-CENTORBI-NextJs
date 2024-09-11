@@ -4,7 +4,7 @@ import ItemCardSkeleton from '@/app/components/ui/Skeleton/ItemCardSkeleton'
 const apiUrl = process.env.NEXT_PUBLIC_API_URL
 
 const getProducts = async() => {
-    const data = await fetch(`${apiUrl}/productos`, {cache: 'no-cache'})
+    const data = await fetch(`${apiUrl}/api/productos`, {cache: 'no-cache'})
     if (!data.ok) {
         const errorText = await data.text()
         console.log('Error response form api', errorText)
