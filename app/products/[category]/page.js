@@ -1,6 +1,5 @@
 import React from 'react'
 import ItemList from '@/app/components/ui/ItemList/ItemList'
-import { NextResponse } from 'next/server'
 
 export async function generateMetadata({params, searchParams}, parent) {
     return {
@@ -17,12 +16,17 @@ export function generateStaticParams () {
     ]
 }
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api'
+const apiUrl = process.env.NEXT_PUBLIC_API_URL
 
 const getProducts = async(category) => {
-    const data = await fetch(`${apiUrl}/productos/${category}`)
+    const data = await fetch(`${apiUrl}/productos/${category}`, {cache: 'no-cache'})
+    if (!data.ok) {
+        const errorText = await data.text()
+        console.log('Error response form api', errorText)
+        throw new Error('Error fetching data')
+    }
     const productos = await data.json()
-    return NextResponse.json(productos)
+    return productos
 }
 
 const Products = async ({params}) => {
