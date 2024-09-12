@@ -6,8 +6,11 @@ import StockCounter from '../../Counter/StockCounter'
 import useCostTransform from '@/app/hooks/useCostTransform'
 import { useCartContext } from '@/app/Context/CartContext'
 import { useRouter } from 'next/navigation'
+import { FaCheck } from 'react-icons/fa'
+import SecondaryButton from '../Buttons/SecondaryButton'
+import PrimaryButton from '../Buttons/PrimaryButton'
 
-const ItemDetail = ({name, img, price,lgDescription, id, stock }) => {
+const ItemDetail = ({name, img, price,lgDescription, id, stock, currentQuantity }) => {
     const [ cantidad, setCantidad ] = useState(0)
     const {costTransform} = useCostTransform()
     const {addToCart} = useCartContext()
@@ -48,7 +51,24 @@ const ItemDetail = ({name, img, price,lgDescription, id, stock }) => {
                 </Link>
                 <p className='mb-3 text-gray-700 dark:text-gray-400'>{lgDescription}</p>
                 <p className='mb-3 text-3xl md:text-5xl font-semibold text-ourpink-light dark:text-white'>{price !== undefined ? costTransform(price) : 'Precio no disponible'}</p>
-                <StockCounter stock={stock} initialValue={1} onAdd={onAdd}/>
+                {
+                    cantidad > 0 ?
+                    <div className='flex flex-col gap-2'>
+                        <div className='mx-2 flex items-center justify-center'>
+                            <FaCheck className='text-[#14991e] dark:text-[#baff94]' size={'3vh'}/>
+                            <p className='font-bold text-lg px-2 py-2 text-[#14991e] dark:text-[#baff94]'>
+                                Has agregado correctamente al carrito
+                            </p>
+                        </div>
+                        <SecondaryButton label={'Ir al carrito'} link={'/cart'} />
+                        <PrimaryButton label={'Seguir comprando'} link={'/products'} />
+                    </div>
+                    :
+                    <StockCounter stock={stock} initialValue={1} onAdd={onAdd}/>
+                }
+                {
+                    currentQuantity === 0 ? '' : <span className='mt-4 flex text-2xl justify-center'>Cantidad en el carrito: {currentQuantity}</span>
+                }
             </div>
         </div>
     </article>

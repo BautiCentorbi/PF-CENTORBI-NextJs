@@ -5,11 +5,13 @@ import { db } from "@/app/config/firebaseConfig"
 import { collection, getDocs, query, where } from "firebase/firestore"
 import { useParams } from "next/navigation"
 import { useEffect, useState } from "react"
+import { useCartContext } from "@/app/Context/CartContext"
 
 const ProductDetail = () => {
   const { id } = useParams()
   const [ loading,setLoading ] = useState(false)
   const [ singleProduct, setSingleProduct ] = useState(null)
+  const { currentQuantity } = useCartContext()
   
   const getProductById = async (id) => {
     try {
@@ -53,6 +55,7 @@ const ProductDetail = () => {
             lgDescription={singleProduct?.lgDescription}
             id={singleProduct?.id}
             price={singleProduct?.price}
+            currentQuantity={currentQuantity(singleProduct?.id)}
           />
         </div>
       }
