@@ -7,9 +7,13 @@ import { v4 as uuidv4 } from "uuid";
 import { useRouter } from "next/navigation";
 import { Toaster, toast } from 'sonner'
 
+const generateCustomId = () => {
+  const uuid = uuidv4().replace(/-/g, '')
+  return uuid.substring(0, 20)
+}
 
 const createProduct = async(values) => {
-    const id = uuidv4()
+    const id = generateCustomId()
     const price = parseFloat(values.price)
     const stock = parseFloat(values.stock)
 
@@ -58,48 +62,38 @@ const CreateForm = () => {
   const [error, setError] = useState({});
 
   const validateForm = () => {
-    // name Validation
     const errors = {};
+
     if (!values.name) {
       errors.name = "Debes agregar un nombre al producto";
-    } else if (values.name.length < 4) {
-      errors.name = "El nombre debe contener al menos 4 caracteres";
     }
-    // id Validation
+
     if (!values.id) {
       errors.id = "Debes agregar un ID al producto";
-    } else if (values.id !== Number) {
-      errors.id = "El ID debe ser un número, no una cadena de texto";
     }
-    // price Validation
-    if (!values.stock) {
+
+    if (!values.price) {
       errors.price = "Debes agregar un precio al producto";
-    } else if (values.price !== Number) {
-      errors.price = "El precio debe ser un número, no una cadena de texto";
-    } else if (values.price.length < 10000) {
+    } else if (parseFloat(values.price) < 10000) {
       errors.price = "El precio no puede ser menor a 10.000";
     }
-    // stock Validation
+
     if (!values.stock) {
       errors.stock = "Debes agregar una cantidad de stock al producto";
-    } else if (values.stock !== Number) {
-      errors.id = "El ID debe ser un número, no una cadena de texto";
-    } else if (values.stock.length < 1) {
+    } else if (parseFloat(values.stock) < 1) {
       errors.stock = "El stock no puede ser menor a 1";
     }
-    // description Validation
+
     if (!values.description) {
       errors.description = "Debes agregar una descripción al producto";
     } else if (values.description.length < 30) {
-      errors.description =
-        "La descripción no puede contener menos de 30 caracteres";
+      errors.description = "La descripción no puede contener menos de 30 caracteres";
     }
-    // lgDescription Validation
+
     if (!values.lgDescription) {
       errors.lgDescription = "Debes agregar un detalle al producto";
     } else if (values.lgDescription.length < 30) {
-      errors.lgDescription =
-        "El detalle de producto no puede contener menos de 30 caracteres";
+      errors.lgDescription = "El detalle de producto no puede contener menos de 30 caracteres";
     }
 
     setError(errors);
@@ -107,21 +101,19 @@ const CreateForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    if (setError.length === 0) {
-      toast.success('Has añadido correctamente el producto')
+    e.preventDefault();
+    if (validateForm()) {
+      toast.success('Has añadido correctamente el producto');
       await createProduct(values, file);
     } else {
-      toast.warning('Revisa y/o completa todos los campos para continuar')
-      return
+      toast.error('Por favor, corrige los errores en el formulario');
     }
-    setError('')
   };
 
   return (
     <div>
       <Toaster richColors expand={false} />
-      <form onSubmit={handleSubmit} className="max-w-sm mx-auto">
+      <form className="max-w-sm mx-auto">
         <div className="mb-5">
           <label
             type="text"
@@ -252,7 +244,8 @@ const CreateForm = () => {
         </div>
         <div className="mb-5">
             <button 
-                type="submit"
+                type="button"
+                onClick={handleSubmit}
                 className="transition px-4 py-1 md:px-6  md:py-2 text-md md:text-lg font-semibold text-center text-white rounded-lg bg-ourpink-light hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-ourpink-light dark:hover:bg-ourpink-light/50 dark:focus:ring-pink-400"
             >
                 Añadir producto

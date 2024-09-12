@@ -22,7 +22,7 @@ const Item = ({name,img,stock,price,description,id}) => {
             <Link href="#">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-ourpink-dark">{name}</h5>
             </Link>
-            <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>{description}</p>
+            <p className='mb-3 font-normal text-gray-700 dark:text-gray-400 text-ellipsis'>{description.substring(0,90)}...</p>
             <p className='mb-3 text-lg md:text-xl font-normal text-gray-700 dark:text-white'>{stock} disponibles</p>
             <p className='mb-3 text-2xl md:text-3xl font-semibold text-ourpink-light dark:text-white'>{costTransform(price)}</p>
             <PrimaryButton label={'Ver Detalle'} link={`/product/${id}`}/>

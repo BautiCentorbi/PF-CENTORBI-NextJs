@@ -73,7 +73,7 @@ const Cart = () => {
             {costTransform(totalPrice())}
           </h3>
           <div className="flex flex-col w-full gap-4">
-            <PrimaryButton label={"Continuar con la compra"} link={""} />
+            <PrimaryButton label={"Continuar con la compra"} link={"/checkout"} />
             <SecondaryButton
               label={"Vaciar Carrito"}
               link={""}
