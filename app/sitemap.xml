@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlsetxmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/products</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/cart</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/products/ux-ui-design</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/products/backend-development</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/products/web-development</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/product/5baf174a14644cc38105</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/product/Bdh04Yp9xS1WHzfjAKEg</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/product/S3MWJmJL7MElt2CycrwV</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/product/a4neYU5zGr14ED2Gz13O</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/product/aBodmverKGsYfDEAaetT</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/product/jUS30ocjg4uCUmDgSXyp</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/product/uHecqe8jeJrHvgDhLodD</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/product/wYqt8dwiCYic4RW3qUeT</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/product/wcDUxCUSz6PrxyM6gx0Z</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pf-centorbi-next-js.vercel.app/product/ykv3zvdjh7VgzEYIY3lV</loc>
+  <lastmod>2024-09-13T22:54:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlsetxmlns=>
