@@ -26,12 +26,11 @@ const createProduct = async(values) => {
         price,
         img: values.img
     })
-    .then(() => console.log('Producto Agregado'))
 }
 
 const CreateForm = () => {
     const router = useRouter()
-  const [values, setValues] = useState({
+    const [values, setValues] = useState({
     name: "",
     id: "",
     category: "",
