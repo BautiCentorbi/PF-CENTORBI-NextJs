@@ -17,7 +17,7 @@ const ProductsTable = async () => {
   const items = await getAllProducts();
 
   return (
-    <div className="overflow-x-auto bg-transparent">
+    <div className="overflow-x-auto bg-background-dark rounded-xl p-8">
       <div className="space-x-2 flex bg-transparent">
         <PrimaryButton link={"/admin/create"} label={"Añadir un producto"} />
         <button
@@ -37,7 +37,7 @@ const ProductsTable = async () => {
               Price
             </th>
             <th scope="col" className="px-3 py-2 text-center">
-              In stock
+              Stock
             </th>
             <th scope="col" className="px-3 py-2 text-center">
               Type

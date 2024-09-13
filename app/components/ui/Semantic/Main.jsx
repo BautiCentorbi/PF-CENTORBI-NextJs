@@ -5,11 +5,6 @@ import HeroSection from '../HomePage/HeroSection'
 
 
 const Main = () => {
-  const cardImage = {
-    borderRadius: '16px'
-  }
-  const targetDate = new Date('2024-08-28T00:00:00')
-
   return (
     <div className='flex flex-col flex-grow items-center align-center mt-2 md:mb-20 w-full min-h-screen'>
       {/* <HeroSection /> */}

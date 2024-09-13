@@ -59,8 +59,11 @@ const Cart = () => {
                 </h2>
                 <h3>Cantidad: {prod.quantity}</h3>
                 <h3>Precio Unitario: {costTransform(prod.price)}</h3>
-                <button onClick={()=> removeItem(prod.id)}>
-                  <FaRegTrashAlt />
+                <button 
+                  className="my-4 transition flex w-full items-center align-center md:w-auto px-2 py-2 md:px-4  md:py-4 text-md md:text-lg font-semibold text-center text-white rounded-lg bg-red-700 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300"
+                  onClick={()=> removeItem(prod.id)}
+                >
+                  <FaRegTrashAlt className="mx-auto" color="#ffffff"/>
                 </button>
               </div>
             );

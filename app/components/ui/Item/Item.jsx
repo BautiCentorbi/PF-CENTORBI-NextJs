@@ -20,11 +20,9 @@ const Item = ({ name, img, stock, price, description, id }) => {
               alt={name}
             />
           </div>
-          <Link href="#">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-ourpink-dark">
               {name}
             </h5>
-          </Link>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 text-ellipsis">
             {description.substring(0, 90)}...
           </p>
@@ -34,7 +32,11 @@ const Item = ({ name, img, stock, price, description, id }) => {
           <p className="mb-3 text-2xl md:text-3xl font-semibold text-ourpink-light dark:text-white">
             {costTransform(price)}
           </p>
-          <h3>Producto No disponible</h3>
+          <button
+            className="w-full transition px-4 py-1 md:px-6  md:py-2 text-md md:text-lg font-semibold text-center text-white rounded-lg bg-ourpink-light hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-ourpink-light dark:hover:bg-ourpink-light/50 dark:focus:ring-pink-400"
+          >
+            Sin cupos disponibles
+          </button>
         </div>
       :
         <div className="p-5">
@@ -47,7 +49,7 @@ const Item = ({ name, img, stock, price, description, id }) => {
               alt={name}
             />
           </div>
-          <Link href="#">
+          <Link href={`/product/${id}`}>
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-ourpink-dark">
               {name}
             </h5>
@@ -61,7 +63,9 @@ const Item = ({ name, img, stock, price, description, id }) => {
           <p className="mb-3 text-2xl md:text-3xl font-semibold text-ourpink-light dark:text-white">
             {costTransform(price)}
           </p>
-          <PrimaryButton label={"Ver Detalle"} link={`/product/${id}`} />
+          <div className="w-full flex">
+            <PrimaryButton label={"Ver Detalle"} link={`/product/${id}`} />
+          </div>
         </div>
       }
     </article>

@@ -23,10 +23,6 @@ const NavBar = () => {
       label: "Productos",
       href: "/products",
     },
-    {
-      label: "Nosotros",
-      href: "/about",
-    },
   ]
   
   const pathname = usePathname()
