@@ -1,6 +1,12 @@
 import React from 'react'
 import EditForm from '@/app/components/admin/forms/EditForm'
 
+export const metadata = {
+  title: 'Next Curs - Edit Product',
+  description: 'Complete edit form to reasign values of a certain product',
+  keywords: 'admin, edit, form, reasign, product',
+}
+
 const EditPage = async({params}) => {
   try {
     const { id } = params

@@ -1,6 +1,12 @@
 import React from 'react'
 import ItemList from '@/app/components/ui/ItemList/ItemList'
 
+export const metadata = {
+    title: 'Next Curs - Cursos',
+    description: 'Explore our wide selection of courses designed to offer unique learning experiences. Find the perfect course for you and start your journey towards knowledge and personal development.',
+    keywords: 'Online Learning, Educational Courses, Learning Experiences, Professional Growth, Course Catalog, E-learning Platform, Knowledge Enhancement ',
+}
+
 const apiUrl = process.env.NEXT_PUBLIC_API_URL
 export const dynamic = 'force-dynamic';
 

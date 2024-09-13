@@ -19,7 +19,6 @@ const NotFound = () => {
             <h2 className='text-xl md:text-2xl'>Por favor, inténtalo de nuevo</h2>
             <PrimaryButton label={'Volver al Inicio'} link={'/'} />
         </div>
-
     </div>
   )
 }

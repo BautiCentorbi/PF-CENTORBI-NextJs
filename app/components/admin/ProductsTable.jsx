@@ -70,6 +70,8 @@ const ProductsTable = async () => {
                     alt={item.name}
                     width={80}
                     height={80}
+                    blurDataURL="data:..."
+                    placeholder="blur"
                   />
                 ) : (
                   <>
