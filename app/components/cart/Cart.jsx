@@ -6,14 +6,13 @@ import PrimaryButton from "../ui/Buttons/PrimaryButton";
 import SecondaryButton from "../ui/Buttons/SecondaryButton";
 import useCostTransform from "@/app/hooks/useCostTransform";
 import CartSvg from "../icons/CartSvg";
+import { FaRegTrashAlt } from "react-icons/fa";
 
 const Cart = () => {
   const { costTransform } = useCostTransform();
 
   const {
     cart,
-    addToCart,
-    isInCart,
     clearCart,
     totalPrice,
     getQuantity,
@@ -46,7 +45,7 @@ const Cart = () => {
           {cart.map((prod) => {
             console.log(prod);
             return (
-              <div key={prod.id} className="bg-background-transparent border-b-2 dark:border-0 dark:bg-background-dark rounded-lg grid grid-cols- md:grid-cols-4 h-fit items-center justify-items-center px-4 my-2 md:my-4">
+              <div key={prod.id} className="bg-background-transparent border-b-2 dark:border-0 dark:bg-background-dark rounded-lg grid grid-cols- md:grid-cols-5 h-fit items-center justify-items-center px-4 my-2 md:my-4">
                 <picture className="m-4">
                   <Image
                     src={prod.img}
@@ -59,7 +58,10 @@ const Cart = () => {
                   {prod.name}
                 </h2>
                 <h3>Cantidad: {prod.quantity}</h3>
-                <h3>Total: {costTransform(prod.price)}</h3>
+                <h3>Precio Unitario: {costTransform(prod.price)}</h3>
+                <button onClick={()=> removeItem(prod.id)}>
+                  <FaRegTrashAlt />
+                </button>
               </div>
             );
           })}

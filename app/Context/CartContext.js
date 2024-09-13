@@ -32,7 +32,7 @@ export const CartProvider = ({children}) => {
     }
 
     const removeItem = (id) => {
-        const updateCart = cart.filter((item) => item.id === id)
+        const updateCart = cart.filter((prod) => prod.id !== id)
         setCart([...updateCart])
     }
 
