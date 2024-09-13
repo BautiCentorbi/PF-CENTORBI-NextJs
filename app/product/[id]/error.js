@@ -3,7 +3,7 @@ import React,{ useEffect } from "react"
 import PrimaryButton from "@/app/components/ui/Buttons/PrimaryButton"
 import Image from "next/image"
 
-export default function(error, reset) {
+export default function Error({error, reset}) {
     useEffect(() => {
         console.log(error)
     },[error])
