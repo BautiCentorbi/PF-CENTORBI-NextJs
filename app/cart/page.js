@@ -3,7 +3,7 @@ import Cart from '@/app/components/cart/Cart'
 
 const CartPage = () => {
   return (
-    <main className='min-w-full mx-4'>
+    <main className='mx-4'>
       <Cart />
     </main>
   )

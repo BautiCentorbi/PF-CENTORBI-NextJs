@@ -36,7 +36,7 @@ const Cart = () => {
     );
   } else {
     return (
-      <div className="mx-auto h-screen flex flex-col md:flex-row gap-4 gap-16 md:justify-center mt-4 md:mt-16">
+      <div className="h-screen flex flex-col md:flex-row gap-4 gap-16 md:justify-center mt-4 md:mt-16">
         <div>
           <h1 className="text-2xl md:text-5xl font-bold my-4">
             Items en el Carrito
@@ -74,8 +74,11 @@ const Cart = () => {
           <h3 className="text-lg md:text-xl">
             Cantidad de productos: {getQuantity()}
           </h3>
+          <h3 className="text-lg md:text-xl">
+            Subtotal: {costTransform(totalPrice())}
+          </h3>
           <h3 className="text-lg md:text-xl font-semibold">
-            {costTransform(totalPrice())}
+            Total: {costTransform(totalPrice())}
           </h3>
           <div className="flex flex-col w-full gap-4">
             <PrimaryButton label={"Continuar con la compra"} link={"/checkout"} />

@@ -127,7 +127,7 @@ const CheckoutForm = () => {
         <div className="mb-5">
           <label
             type="text"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-md md:text-lg font-medium text-gray-900 dark:text-white"
           >
             Nombre:
           </label>
@@ -143,7 +143,7 @@ const CheckoutForm = () => {
         <div className="mb-5">
           <label
             type="label"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-md md:text-lg font-medium text-gray-900 dark:text-white"
           >
             Correo Electrónico:
           </label>
@@ -159,7 +159,7 @@ const CheckoutForm = () => {
         <div className="mb-5">
           <label
             type="text"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-md md:text-lg font-medium text-gray-900 dark:text-white"
           >
             Repetir Correo Electrónico:
           </label>
@@ -175,7 +175,7 @@ const CheckoutForm = () => {
         <div className="mb-5">
           <label
             type="text"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-md md:text-lg font-medium text-gray-900 dark:text-white"
           >
             Número de Teléfono:
           </label>
@@ -188,13 +188,20 @@ const CheckoutForm = () => {
             placeholder="261111111"
           />
         </div>
-        <div className="mb-5">
+        <div className="mb-5 flex flex-col md:flex-row gap-2">
             <button 
                 type="button"
                 onClick={getOrder}
-                className="transition px-4 py-1 md:px-6  md:py-2 text-md md:text-lg font-semibold text-center text-white rounded-lg bg-ourpink-light hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-ourpink-light dark:hover:bg-ourpink-light/50 dark:focus:ring-pink-400"
+                className="w-full md:w-auto transition px-4 py-1 md:px-6  md:py-2 text-md md:text-lg font-semibold text-center text-white rounded-lg bg-ourpink-light hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-ourpink-light dark:hover:bg-ourpink-light/50 dark:focus:ring-pink-400"
             >
                 Finalizar Compra
+            </button>
+            <button 
+                type="button"
+                onClick={router.back}
+                className="w-full md:w-auto transition px-4 py-1 md:px-6  md:py-2 text-md md:text-lg font-semibold text-center text-ourpink-light/80 dark:text-white rounded-lg border-2 border-ourpink-light/80 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-transparent dark:border-2 dark:border-ourpink-light dark:hover:bg-ourpink-light/50 dark:focus:ring-pink-400"
+                >
+                Regresar
             </button>
         </div>
       </form>
