@@ -58,6 +58,7 @@ const ItemDetail = ({
             width={244}
             height={244}
             style={{ maxHeight: "644px", maxWidth: "644px" }}
+            placeholder="blur"
             alt={name}
           />
         </div>

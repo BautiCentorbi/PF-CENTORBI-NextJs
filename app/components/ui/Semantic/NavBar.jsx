@@ -53,7 +53,7 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Nav */}
-      <ul className={`${nav ? 'z-50 md:hidden flex flex-col fixed left-0 top-0  h-full border-r border-r-gray-900 bg-background-dark ease-in-out duration-500' : 'flex flex-col ease-in-out  duration-500 fixed top-0 bottom-0 left-[-100%]'} w-[200px]`}>
+      <div className={`${nav ? 'z-50 md:hidden flex flex-col fixed left-0 top-0  h-full border-r border-r-gray-900 bg-background-dark ease-in-out duration-500' : 'flex flex-col ease-in-out  duration-500 fixed top-0 bottom-0 left-[-100%]'} w-[200px]`}>
         <Image
           src={"/images/MainLogo.png"}
           height={144}
@@ -65,7 +65,7 @@ const NavBar = () => {
             {item.label}
           </Link>
         ))}
-      </ul>
+      </div>
     </nav>
   )
 }

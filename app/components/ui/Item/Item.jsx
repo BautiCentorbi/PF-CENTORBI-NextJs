@@ -17,6 +17,7 @@ const Item = ({ name, img, stock, price, description, id }) => {
               width={144}
               height={144}
               style={{ maxHeight: "144px", width: "auto" }}
+              placeholder="blur"
               alt={name}
             />
           </div>
