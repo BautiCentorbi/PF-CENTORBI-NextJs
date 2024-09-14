@@ -43,7 +43,7 @@ const ProductDetail = () => {
     <>
       {
         loading ?
-        <div className="my-4 md:my-16 w-full flex items-start justify-center h-screen ">
+        <div className="my-4 md:my-16 w-full flex items-start justify-center min-h-screen ">
           <ItemDetailSkeleton />
         </div>
         :
