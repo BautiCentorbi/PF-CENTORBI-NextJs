@@ -37,13 +37,13 @@ const NavBar = () => {
       </Link>
     
     {/* Desktop Nav */}
-      <ul className="hidden md:flex">
+      <div className="hidden md:flex">
         {navItems.map((item) => (
           <Link key={item.label} href={item.href} className={`${pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href)) ? 'rounded-none border-ourpink-dark border-b-2 hover:border-0 hover:rounded-xl' : ''} px-4 py-2 text-black font-medium text-xl hover:text-white hover:bg-ourpink-light dark:text-white dark:hover:bg-ourpink-dark rounded-xl m-2 cursor-pointer duration-300 dark:hover:text-black hover:font-semibold`}>
             {item.label}
           </Link>
         ))}
-      </ul>
+      </div>
 
       <CartWidget />
 

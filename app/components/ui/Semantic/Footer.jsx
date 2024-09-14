@@ -33,7 +33,7 @@ const Footer = () => {
               </Link>
             </div>
         </div>
-        <span className='flex justify-center text-slate-500'>© 2024 - All rights reserved</span>
+        <span className='flex justify-center text-slate-400'>© 2024 - All rights reserved</span>
     </footer>
   )
 }

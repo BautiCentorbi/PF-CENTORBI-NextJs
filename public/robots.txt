@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /admin
+
+Sitemap: https://pf-centorbi-next-js.vercel.app/sitemap.xml

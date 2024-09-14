@@ -4,6 +4,7 @@ import NavBar from "./components/ui/Semantic/NavBar";
 import Footer from "./components/ui/Semantic/Footer";
 import { CartProvider } from "./Context/CartContext";
 import { AuthProvider } from "./Context/AuthContext";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
             <Footer/>
           </CartProvider>
         </AuthProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
