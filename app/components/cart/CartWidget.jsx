@@ -8,7 +8,7 @@ const CartWidget = () => {
 
   return (
     <div className="flex aspect-square items-center justify-center rounded-full px-2 py-2 border-2 bg-background-dark border-slate-600">
-      <Link href={"/cart"}>
+      <Link aria-details="Link to the products cart page" href={"/cart"}>
         {getQuantity() > 0
         ?
           <li className="font-sans block mt-4 lg:inline-block lg:mt-0 align-middle text-black hover:text-gray-700">

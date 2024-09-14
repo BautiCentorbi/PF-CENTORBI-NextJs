@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className='my-8 bg-slate-200/80 dark:bg-transparent'>
         <div className="grid grid-cols-1 md:grid-cols-3 md:mx-36 justify-center gap-10">
             <div className="flex flex-col items-center justify-center align-center">
-              <Link href={'/'}>
+              <Link aria-details="Go back to Home Page" href={'/'}>
                 <MainLogo className='transition text-black dark:text-white hover:text-ourpink-light hover:scale-110 w-56 h-56 md:w-80  md:h-80'/>
               </Link>
             </div>
@@ -22,13 +22,13 @@ const Footer = () => {
               </ul>
             </div>
             <div className="flex flex-row gap-4 items-center justify-center mb-4">
-              <Link target='blank' rel='noreferrer, noopener, nofollow' href='https://instagram.com/centorbii'>
+              <Link aria-details="Link to the creator's instagram account" target='blank' rel='noreferrer, noopener, nofollow' href='https://instagram.com/centorbii'>
                 <InstagramLogo className='transition size-16 md:size-20 text-black dark:text-white hover:text-ourpink-light hover:scale-125' />
               </Link>
-              <Link target='blank' rel='noreferrer, noopener, nofollow' href='https://github.com/BautiCentorbi'>
+              <Link aria-details="Link to the creator's github profile" target='blank' rel='noreferrer, noopener, nofollow' href='https://github.com/BautiCentorbi'>
                 <GithubLogo className='transition size-16 md:size-20 text-black dark:text-white hover:text-ourpink-light hover:scale-125' />
               </Link>
-              <Link target='blank' rel='noreferrer, noopener, nofollow' href='https://x.com/centorbiiy'>
+              <Link aria-details="Link to the creator's twitter account" target='blank' rel='noreferrer, noopener, nofollow' href='https://x.com/centorbiiy'>
                 <TwitterLogo className= 'transition size-16 md:size-20 text-black dark:text-white hover:text-ourpink-light hover:scale-125' />
               </Link>
             </div>

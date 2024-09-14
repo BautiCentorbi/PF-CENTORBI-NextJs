@@ -61,7 +61,7 @@ const NavBar = () => {
           alt="Next Curs Main Logo"
         />
         {navItems.map((item) => (
-          <Link key={item.label} href={item.href} className={`${pathname === item.href ? 'bg-ourpink-light' : ''} p-4 border-b rounded-t-xl hover:bg-ourpink-dark duration-300 hover:text-black cursor-pointer border-gray-600`}>
+          <Link aria-details="Link to a navigation bar route" key={item.label} href={item.href} className={`${pathname === item.href ? 'bg-ourpink-light' : ''} p-4 border-b rounded-t-xl hover:bg-ourpink-dark duration-300 hover:text-black cursor-pointer border-gray-600`}>
             {item.label}
           </Link>
         ))}
